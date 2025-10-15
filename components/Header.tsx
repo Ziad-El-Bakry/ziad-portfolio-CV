@@ -3,12 +3,12 @@ import { motion } from 'framer-motion'
 
 const Header = () => {
   return (
-    // <motion.div
-    //   initial={{ opacity: 0, y: 8 }}
-    //   animate={{ opacity: 1, y: 0 }}
-    //   transition={{ duration: 0.5 }}
-    //   className="flex items-center gap-8 bg-white p-8 rounded-2xl shadow-md"
-    // >
+    <motion.div
+      initial={{ opacity: 0, y: 8 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="flex items-center gap-8 bg-white p-8 rounded-2xl shadow-md"
+    >
       <motion.div
         whileHover={{ scale: 1.05, rotate: 2 }}
         transition={{ type: 'spring', stiffness: 300 }}
