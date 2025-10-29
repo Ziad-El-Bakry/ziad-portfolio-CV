@@ -19,8 +19,8 @@ const Header = () => {
         <Image
           src="/profile.png"
           alt="Ziad EL Bakry"
-          width={160}
-          height={160}
+          width={200}
+          height={200}
           priority
           className="object-cover"
         />
