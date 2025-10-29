@@ -11,16 +11,15 @@ const Header = () => {
       className="flex flex-col sm:flex-row items-center sm:items-start gap-6 sm:gap-8 bg-white p-6 sm:p-8 rounded-2xl shadow-xl"
     >
       <motion.div
-        whileHover={{ scale: 1.14, rotate: 4 }}
+        whileHover={{ scale: 1.12, rotate: 4 }}
         transition={{ type: 'spring', stiffness: 260 }}
-        className="w-28 h-28 sm:w-40 sm:h-40 rounded-full overflow-hidden border-4 border-indigo-400 flex items-center justify-center bg-gradient-to-br from-indigo-50 to-white shadow-2xl"
+        className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-indigo-400 flex items-center justify-center bg-gradient-to-br from-indigo-50 to-white shadow-2xl"
       >
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
         <Image
           src="/profile.png"
           alt="Ziad EL Bakry"
-          width={160}
-          height={160}
+          width={200}
+          height={200}
           priority
           className="object-cover"
         />
@@ -30,7 +29,7 @@ const Header = () => {
         initial={{ opacity: 0, x: -8 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.35, delay: 0.12 }}
-        className="text-center sm:text-left mt-4 sm:mt-0 flex-1"
+        className="text-center sm:text-left mt-3 sm:mt-0 flex-1"
       >
         <div className="flex items-center gap-3">
           <h1 className="text-2xl sm:text-4xl font-extrabold text-gray-900">Ziad El Bakry</h1>
@@ -47,7 +46,7 @@ const Header = () => {
           Full-Stack Developer — AI Enthusiast
         </p>
 
-        <div className="mt-3 text-xs sm:text-sm flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+  <div className="mt-3 text-xs sm:text-sm flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 flex-wrap">
           <div className="flex items-center gap-3">
             <a href="mailto:zezomamdouh6@gmail.com" className="inline-flex items-center gap-2 text-gray-700 hover:text-indigo-600">
               <FaEnvelope className="w-4 h-4" />

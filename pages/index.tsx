@@ -8,11 +8,12 @@ export default function Home() {
   return (
     <>
       <Head>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
         <title>Ziad El Bakry — Portfolio</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <div className="min-h-screen flex items-start justify-center py-12">
-        <div className="w-full max-w-4xl px-6">
+      <div className="min-h-screen flex items-start justify-center py-8">
+        <div className="w-full max-w-4xl px-4 sm:px-6">
           <Header />
           <main className="mt-8 space-y-12">
             <About />
