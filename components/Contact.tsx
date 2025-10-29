@@ -1,18 +1,55 @@
 import { motion } from 'framer-motion'
+import { FaLinkedin, FaGithub, FaMapMarkerAlt, FaDownload } from 'react-icons/fa'
 
 const Contact = () => {
   return (
-    <motion.section initial={{opacity:0, y:8}} whileInView={{opacity:1, y:0}} viewport={{once:true}} transition={{duration:0.5}} className="bg-white p-6 rounded-2xl shadow-sm">
-      <h2 className="text-xl font-semibold">Contact</h2>
-      <p className="mt-2 text-sm">Location: Ain Shams, Cairo, Egypt</p>
-      <div className="mt-3">
-        <a href="https://linkedin.com/in/ziad-el-bakry-103b81326" target="_blank" rel="noreferrer" className="underline">LinkedIn</a>
-        <span className="mx-2">•</span>
-        <a href="https://github.com/Ziad-El-Bakry" target="_blank" rel="noreferrer" className="underline">GitHub</a>
+    <motion.section
+      initial={{ opacity: 0, y: 8 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.45 }}
+      className="bg-white p-6 rounded-2xl shadow-md"
+    >
+      <div className="flex items-start justify-between">
+        <div>
+          <h2 className="text-xl font-semibold">Contact</h2>
+          <p className="mt-2 text-sm text-gray-700 flex items-center gap-2">
+            <FaMapMarkerAlt className="w-4 h-4 text-indigo-500" />
+            Ain Shams, Cairo, Egypt
+          </p>
+
+          <div className="mt-3 flex items-center gap-4">
+            <a
+              href="https://linkedin.com/in/ziad-el-bakry-103b81326"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800"
+            >
+              <FaLinkedin className="w-4 h-4" /> LinkedIn
+            </a>
+
+            <a
+              href="https://github.com/Ziad-El-Bakry"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 text-gray-700 hover:text-gray-900"
+            >
+              <FaGithub className="w-4 h-4" /> GitHub
+            </a>
+          </div>
+        </div>
+
+        <motion.a
+          whileHover={{ scale: 1.03 }}
+          whileTap={{ scale: 0.98 }}
+          href="/Ziad El Bakry - CV.pdf"
+          download
+          className="inline-flex items-center gap-2 bg-indigo-600 text-white px-4 py-2 rounded-lg shadow-md hover:bg-indigo-700"
+        >
+          <FaDownload className="w-4 h-4" />
+          <span className="text-sm">Download CV</span>
+        </motion.a>
       </div>
-      <a href="/Ziad El Bakry - CV.pdf" download className="mt-4 inline-block bg-indigo-600 text-white px-5 py-2 rounded-lg shadow-md hover:bg-indigo-700 transition">
-        Download CV
-      </a>
     </motion.section>
   )
 }
