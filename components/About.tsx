@@ -9,7 +9,7 @@ const languages = [
   { name: 'Python', color: 'bg-green-400', level: 74, sample: "print('Hello, Python!')", icon: FaPython },
   { name: 'C++', color: 'bg-amber-600', level: 62, sample: "#include <iostream>\nint main(){ std::cout << \"Hi\"; }", icon: SiCplusplus },
   { name: 'PHP', color: 'bg-violet-600', level: 68, sample: "<?php echo 'Hello PHP'; ?>", icon: FaPhp },
-  { name: 'Node.js', color: 'bg-violet-600', level: 50, sample: "console.log('Hello, Node.js!')", icon: FaNodeJs },
+  { name: 'Node.js', color: 'bg-violet-600', level: 68, sample: "console.log('Hello, Node.js!')", icon: FaNodeJs },
 
   {
     name: 'React',
