@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { useState, useEffect } from 'react'
-import { FaJs, FaPython, FaPhp, FaReact } from 'react-icons/fa'
+import { FaJs, FaPython, FaPhp, FaReact, FaNodeJs } from 'react-icons/fa'
 import { SiTypescript, SiCplusplus } from 'react-icons/si'
 
 const languages = [
@@ -9,6 +9,8 @@ const languages = [
   { name: 'Python', color: 'bg-green-400', level: 74, sample: "print('Hello, Python!')", icon: FaPython },
   { name: 'C++', color: 'bg-amber-600', level: 62, sample: "#include <iostream>\nint main(){ std::cout << \"Hi\"; }", icon: SiCplusplus },
   { name: 'PHP', color: 'bg-violet-600', level: 68, sample: "<?php echo 'Hello PHP'; ?>", icon: FaPhp },
+  { name: 'Node.js', color: 'bg-violet-600', level: 50, sample: "console.log('Hello, Node.js!')", icon: FaNodeJs },
+
   {
     name: 'React',
     color: 'bg-cyan-400',
