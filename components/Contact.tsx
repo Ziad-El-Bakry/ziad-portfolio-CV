@@ -10,7 +10,12 @@ const Contact = () => {
       transition={{ duration: 0.45 }}
       className="bg-white p-6 rounded-2xl shadow-md"
     >
-      <div className="flex items-start justify-between">
+      {/* تغيير هنا: 
+         flex-col (عمودي للموبايل) 
+         md:flex-row (أفقي للشاشات الأكبر)
+         gap-4 (مسافة بين العناصر في الوضع العمودي)
+      */}
+      <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
         <div>
           <h2 className="text-xl font-semibold">Contact</h2>
           <p className="mt-2 text-sm text-gray-700 flex items-center gap-2">
@@ -40,13 +45,14 @@ const Contact = () => {
         </div>
 
         <motion.a
-          whileHover={{ scale: 1.04 }}
+          whileHover={{ scale: 1.03 }}
           whileTap={{ scale: 0.98 }}
           href="/Ziad El Bakry - CV.pdf"
           download
-          className="inline-flex items-center gap-1.5 bg-indigo-800 text-white px-4 py-2 rounded-lg shadow-md hover:bg-indigo-700"
+       
+          className="inline-flex items-center justify-center gap-2 bg-indigo-600 text-white px-4 py-2 rounded-lg shadow-md hover:bg-indigo-700 w-full md:w-auto transition-colors"
         >
-          <FaDownload className="w-4 h-6" />
+          <FaDownload className="w-4 h-4" />
           <span className="text-sm">Download CV</span>
         </motion.a>
       </div>

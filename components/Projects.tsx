@@ -11,10 +11,22 @@ const projects: Project[] = [
     tags: ['Computer Vision', 'Python', 'ML'],
   },
   {
-    title: 'Node.js MongoDB Registration System (Optimized)',
+    title: 'Node.js MongoDB Registration System',
     desc: 'Secure registration and authentication system with query optimization.',
     link: 'https://github.com/Ziad-El-Bakry/nodejs_mongodb_register_optimize',
     tags: ['Node.js', 'MongoDB', 'Security'],
+  },
+  {
+    title: 'LMS Node.js',
+    desc: 'Learning Management System backend logic and API structure.',
+    link: 'https://github.com/Ziad-El-Bakry/lms_nodejs',
+    tags: ['Node.js', 'Express', 'Backend'],
+  },
+  {
+    title: 'To-Do List',
+    desc: 'Interactive task management application for tracking daily activities.',
+    link: 'https://github.com/Ziad-El-Bakry/todo-list',
+    tags: ['JavaScript', 'HTML', 'CSS'],
   },
 ]
 
@@ -22,7 +34,7 @@ const Projects = () => {
   return (
     <section>
       <h2 className="text-xl font-semibold mb-4">Projects</h2>
-  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {projects.map((p, i) => (
           <motion.article
             key={p.title}
