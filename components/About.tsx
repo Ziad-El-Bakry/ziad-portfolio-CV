@@ -1,14 +1,14 @@
 import { motion } from 'framer-motion'
 import { useState, useEffect } from 'react'
-import { FaJs, FaPython, FaPhp, FaReact, FaNodeJs } from 'react-icons/fa'
+import { FaJs, FaPython, FaPhp, FaReact, FaNodeJs, FaLaravel } from 'react-icons/fa'
 import { SiTypescript, SiCplusplus } from 'react-icons/si'
 
 const languages = [
-  { name: 'JavaScript', color: 'bg-yellow-400', level: 88, sample: "console.log('Hello, JS!')", icon: FaJs },
+  { name: 'Laravel', color: 'bg-red-900', level: 88, sample: "console.log('Hello, JS!')", icon: FaLaravel },
   { name: 'TypeScript', color: 'bg-sky-500', level: 82, sample: "const greet = (name: string) => `Hello, ${name}`", icon: SiTypescript },
-  { name: 'Python', color: 'bg-green-400', level: 74, sample: "print('Hello, Python!')", icon: FaPython },
+  { name: 'Python', color: 'bg-sky-700', level: 74, sample: "print('Hello, Python!')", icon: FaPython },
   { name: 'C++', color: 'bg-amber-600', level: 62, sample: "#include <iostream>\nint main(){ std::cout << \"Hi\"; }", icon: SiCplusplus },
-  { name: 'PHP', color: 'bg-violet-600', level: 68, sample: "<?php echo 'Hello PHP'; ?>", icon: FaPhp },
+  { name: 'PHP', color: 'bg-sky-800', level: 68, sample: "<?php echo 'Hello PHP'; ?>", icon: FaPhp },
   { name: 'Node.js', color: 'bg-violet-600', level: 68, sample: "console.log('Hello, Node.js!')", icon: FaNodeJs },
 
   {

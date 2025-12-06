@@ -1,6 +1,18 @@
+"use client"
+
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { FaGithub, FaLinkedin, FaEnvelope, FaWhatsapp } from 'react-icons/fa'
+
+import * as React from "react"
+import { ThemeProvider as NextThemesProvider } from "next-themes"
+
+export function ThemeProvider({
+  children,
+  ...props
+}: React.ComponentProps<typeof NextThemesProvider>) {
+  return <NextThemesProvider {...props}>{children}</NextThemesProvider>
+}
 
 const Header = () => {
   return (
@@ -63,7 +75,7 @@ const Header = () => {
               <FaGithub className="w-5 h-5" />
             </a>
             <a href="https://linkedin.com/in/ziad-el-bakry-103b81326"
-target="_blank" rel="noreferrer" className="text-blue-600 hover:text-blue-800">
+              target="_blank " rel="noreferrer" className="text-blue-600 hover:text-blue-800">
               <FaLinkedin className="w-5 h-5" />
             </a>
 
@@ -71,7 +83,7 @@ target="_blank" rel="noreferrer" className="text-blue-600 hover:text-blue-800">
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
               href="https://wa.me/qr/4ZFURFBNVUB2J1"
-              target="_blank"
+              target="_blank "
               rel="noopener noreferrer"
               aria-label="Open WhatsApp chat"
               title="WhatsApp"

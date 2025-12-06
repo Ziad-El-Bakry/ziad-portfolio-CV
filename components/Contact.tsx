@@ -10,11 +10,6 @@ const Contact = () => {
       transition={{ duration: 0.45 }}
       className="bg-white p-6 rounded-2xl shadow-md"
     >
-      {/* تغيير هنا: 
-         flex-col (عمودي للموبايل) 
-         md:flex-row (أفقي للشاشات الأكبر)
-         gap-4 (مسافة بين العناصر في الوضع العمودي)
-      */}
       <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
         <div>
           <h2 className="text-xl font-semibold">Contact</h2>
