@@ -38,10 +38,10 @@ const Projects = () => {
         {projects.map((p, i) => (
           <motion.article
             key={p.title}
-            initial={{ opacity: 0, y: 8 }}
+            initial={{ opacity: 0, y: 8 }}  
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.45, delay: i * 0.06 }}
+            transition={{ duration: 1.9, delay: i * 0.06 }}
             className="p-5 bg-white rounded-2xl shadow-md hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1"
           >
             <div className="flex items-start justify-between">

@@ -19,23 +19,23 @@ const Header = () => {
     <motion.header
       initial={{ opacity: 0, y: 36 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.45, delay: 0.05, ease: [0.2, 0.8, 0.2, 1] }}
+      transition={{ duration: 1.9, delay: 0.02, ease: [0.2, 0.8, 0.5, 1] }}
       className="flex flex-col sm:flex-row items-center sm:items-start gap-6 sm:gap-8 bg-white p-6 sm:p-8 rounded-2xl shadow-xl"
     >
-      <motion.div
+      {/* <motion.div
         whileHover={{ scale: 1.12, rotate: 4 }}
         transition={{ type: 'spring', stiffness: 260 }}
         className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-indigo-400 flex items-center justify-center bg-gradient-to-br from-indigo-50 to-white shadow-2xl"
       >
         <Image
-          src="/profile.png"
+          src="/ziad.jpg"
           alt="Ziad EL Bakry"
-          width={200}
-          height={200}
+          width={300}
+          height={300}
           priority
           className="object-cover"
         />
-      </motion.div>
+      </motion.div> */}
 
       <motion.div
         initial={{ opacity: 0, x: -8 }}

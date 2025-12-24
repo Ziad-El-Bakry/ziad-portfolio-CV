@@ -10,14 +10,7 @@ const languages = [
   { name: 'C++', color: 'bg-amber-600', level: 62, sample: "#include <iostream>\nint main(){ std::cout << \"Hi\"; }", icon: SiCplusplus },
   { name: 'PHP', color: 'bg-sky-800', level: 68, sample: "<?php echo 'Hello PHP'; ?>", icon: FaPhp },
   { name: 'Node.js', color: 'bg-violet-600', level: 68, sample: "console.log('Hello, Node.js!')", icon: FaNodeJs },
-
-  {
-    name: 'React',
-    color: 'bg-cyan-400',
-    level: 60,
-    sample: `function Hello() {\n  return (<div>Hello</div>)\n}`,
-    icon: FaReact,
-  },
+  { name: 'React', color: 'bg-cyan-400', level: 60, sample: `function Hello() {\n  return (<div>Hello</div>)\n}`, icon: FaReact, },
 ]
 
 const About = () => {
@@ -37,7 +30,7 @@ const About = () => {
       initial={{ opacity: 0, y: 10 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.45, ease: [0.2, 0.8, 0.2, 1] }}
+      transition={{ duration: 1.9, ease: [0.2, 0.8, 0.2, 1] }}
       className="bg-white p-6 rounded-2xl shadow-lg"
     >
       <div className="flex items-center justify-between">
