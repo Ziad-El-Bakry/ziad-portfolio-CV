@@ -8,16 +8,17 @@ const containerVariants = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
-    transition: { staggerChildren: 0.15 }
+    transition: { staggerChildren: 0.2, delayChildren: 0.1 }
   }
 }
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 30 },
+  hidden: { opacity: 0, y: 40, filter: "blur(10px)" },
   show: { 
     opacity: 1, 
     y: 0,
-    transition: { type: "spring", stiffness: 300, damping: 24 }
+    filter: "blur(0px)",
+    transition: { type: "spring", stiffness: 280, damping: 22 }
   }
 }
 
@@ -39,10 +40,10 @@ const Projects = () => {
 
   return (
     <motion.section
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.8 }}
+      initial={{ opacity: 0, y: 40, filter: "blur(12px)" }}
+      whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
     >
       <div className="flex items-center justify-between mb-6">
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white tracking-tight">Featured Projects</h2>
@@ -67,9 +68,9 @@ const Projects = () => {
             <motion.article
               key={p.title + i}
               variants={itemVariants}
-              whileHover={{ y: -6, scale: 1.02 }}
-              transition={{ type: "spring", stiffness: 400, damping: 10 }}
-              className="p-6 bg-white dark:bg-slate-800 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-gray-50 dark:border-slate-700 flex flex-col h-full"
+              whileHover={{ y: -10, scale: 1.03 }}
+              transition={{ type: "spring", stiffness: 400, damping: 15 }}
+              className="p-6 bg-white dark:bg-slate-800 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] border border-gray-50 dark:border-slate-700 flex flex-col h-full"
             >
               <div className="flex items-start justify-between">
                 <h3 className="font-bold text-lg text-gray-900 dark:text-white capitalize leading-tight pr-4">{p.title}</h3>

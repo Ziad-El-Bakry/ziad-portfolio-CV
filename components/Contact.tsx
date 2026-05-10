@@ -4,10 +4,10 @@ import { FaLinkedin, FaGithub, FaMapMarkerAlt, FaDownload } from 'react-icons/fa
 const Contact = () => {
   return (
     <motion.section
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0, y: 40, filter: "blur(12px)" }}
+      whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
       viewport={{ once: true, margin: "-50px" }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
+      transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
       className="bg-white dark:bg-slate-800 p-8 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-50 dark:border-slate-700"
     >
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
