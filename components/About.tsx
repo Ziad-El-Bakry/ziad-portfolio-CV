@@ -27,11 +27,11 @@ const About = () => {
 
   return (
     <motion.section
-      initial={{ opacity: 0, y: 10 }}
+      initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 1.9, ease: [0.2, 0.8, 0.2, 1] }}
-      className="bg-white p-6 rounded-2xl shadow-lg"
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="bg-white p-8 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-50"
     >
       <div className="flex items-center justify-between">
         <h2 className="text-xl font-semibold">About</h2>
@@ -79,7 +79,8 @@ const About = () => {
             {languages.map((lang, idx) => {
               const Icon = lang.icon
               return (
-                <button
+                <motion.button
+                  layout
                   key={lang.name}
                   onClick={() => setActive(idx)}
                   tabIndex={0}
@@ -90,10 +91,13 @@ const About = () => {
                       setActive(idx)
                     }
                   }}
-                  className={`w-full flex items-center justify-between p-2 rounded-lg transition-transform transform motion-safe:duration-200 hover:-translate-y-1 focus:outline-none ${
+                  whileHover={{ scale: 1.02, x: 4 }}
+                  whileTap={{ scale: 0.98 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                  className={`w-full flex items-center justify-between p-3 rounded-xl transition-colors outline-none ${
                     active === idx
-                      ? 'ring-2 ring-offset-2 ring-sky-300 bg-white'
-                      : 'hover:bg-white/60 bg-transparent'
+                      ? 'ring-2 ring-sky-400 bg-sky-50 shadow-sm'
+                      : 'hover:bg-gray-50 bg-transparent'
                   }`}
                 >
                   <div className="flex items-center gap-3">
@@ -105,16 +109,15 @@ const About = () => {
 
                   <div className="w-1/2 ml-3">
                     <div className="w-full bg-gray-200 rounded-full h-2 overflow-hidden">
-                      <div
+                      <motion.div
                         className={`h-2 rounded-full ${lang.color}`}
-                        style={{
-                          width: mounted ? `${lang.level}%` : '0%',
-                          transition: 'width 600ms cubic-bezier(.2,.8,.2,1)',
-                        }}
+                        initial={{ width: 0 }}
+                        animate={{ width: mounted ? `${lang.level}%` : '0%' }}
+                        transition={{ type: "spring", stiffness: 50, damping: 12, delay: 0.1 }}
                       />
                     </div>
                   </div>
-                </button>
+                </motion.button>
               )
             })}
           </div>
