@@ -8,13 +8,13 @@ const Contact = () => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="bg-white p-8 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-50"
+      className="bg-white dark:bg-slate-800 p-8 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-50 dark:border-slate-700"
     >
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
         <div>
-          <h2 className="text-2xl font-bold text-gray-900 tracking-tight">Let's Connect</h2>
-          <p className="mt-3 text-sm text-gray-600 flex items-center gap-2 font-medium">
-            <FaMapMarkerAlt className="w-4 h-4 text-indigo-500" />
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white tracking-tight">Let's Connect</h2>
+          <p className="mt-3 text-sm text-gray-600 dark:text-gray-300 flex items-center gap-2 font-medium">
+            <FaMapMarkerAlt className="w-4 h-4 text-indigo-500 dark:text-indigo-400" />
             Ain Shams, Cairo, Egypt
           </p>
 
@@ -25,7 +25,7 @@ const Contact = () => {
               href="https://linkedin.com/in/ziad-el-bakry-103b81326"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold transition-colors"
+              className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-semibold transition-colors"
             >
               <FaLinkedin className="w-5 h-5" /> LinkedIn
             </motion.a>
@@ -36,7 +36,7 @@ const Contact = () => {
               href="https://github.com/Ziad-El-Bakry"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 text-gray-700 hover:text-gray-900 font-semibold transition-colors"
+              className="inline-flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-semibold transition-colors"
             >
               <FaGithub className="w-5 h-5" /> GitHub
             </motion.a>

@@ -14,7 +14,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     
     const data = await response.json();
     
-    const excludedProjects = ['kscarf final'];
+    const excludedProjects = ['kscarf final', 'kscarf-final'];
 
     // Format the response to match the Project type on the frontend
     const projects = data

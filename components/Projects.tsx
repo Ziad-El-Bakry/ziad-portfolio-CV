@@ -45,14 +45,14 @@ const Projects = () => {
       transition={{ duration: 0.8 }}
     >
       <div className="flex items-center justify-between mb-6">
-        <h2 className="text-2xl font-bold text-gray-900 tracking-tight">Featured Projects</h2>
-        <span className="text-xs font-medium text-indigo-500 bg-indigo-50 px-3 py-1 rounded-full">Live from GitHub</span>
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white tracking-tight">Featured Projects</h2>
+        <span className="text-xs font-medium text-indigo-500 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-900/30 px-3 py-1 rounded-full">Live from GitHub</span>
       </div>
       
       {loading ? (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {[1, 2, 3, 4].map(i => (
-            <div key={i} className="h-48 bg-gray-100 animate-pulse rounded-2xl"></div>
+            <div key={i} className="h-48 bg-gray-100 dark:bg-slate-800 animate-pulse rounded-2xl"></div>
           ))}
         </div>
       ) : (
@@ -69,35 +69,35 @@ const Projects = () => {
               variants={itemVariants}
               whileHover={{ y: -6, scale: 1.02 }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
-              className="p-6 bg-white rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-gray-100 flex flex-col h-full"
+              className="p-6 bg-white dark:bg-slate-800 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-gray-50 dark:border-slate-700 flex flex-col h-full"
             >
               <div className="flex items-start justify-between">
-                <h3 className="font-bold text-lg text-gray-900 capitalize leading-tight pr-4">{p.title}</h3>
+                <h3 className="font-bold text-lg text-gray-900 dark:text-white capitalize leading-tight pr-4">{p.title}</h3>
                 <motion.a 
                   whileHover={{ rotate: 15, scale: 1.15 }}
                   whileTap={{ scale: 0.95 }}
                   href={p.link} 
                   target="_blank" 
                   rel="noreferrer" 
-                  className="text-gray-400 hover:text-gray-900 flex-shrink-0"
+                  className="text-gray-400 dark:text-gray-500 hover:text-gray-900 dark:hover:text-white flex-shrink-0"
                 >
                   <FaGithub className="w-6 h-6" />
                 </motion.a>
               </div>
 
-              <p className="text-sm mt-3 text-gray-600 flex-grow leading-relaxed">{p.desc}</p>
+              <p className="text-sm mt-3 text-gray-600 dark:text-gray-300 flex-grow leading-relaxed">{p.desc}</p>
 
               <div className="mt-5 flex flex-wrap gap-2">
                 {(p.tags || []).map((t) => (
-                  <span key={t} className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 bg-indigo-50 text-indigo-600 rounded-md">
+                  <span key={t} className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 rounded-md">
                     {t}
                   </span>
                 ))}
               </div>
 
-              <div className="mt-6 pt-4 border-t border-gray-50">
+              <div className="mt-6 pt-4 border-t border-gray-50 dark:border-slate-700">
                 <motion.a
-                  className="inline-flex items-center gap-2 text-sm font-semibold text-indigo-600 hover:text-indigo-800"
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300"
                   href={p.link}
                   target="_blank"
                   rel="noreferrer"
